@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nature Gallery</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="dotgrid"></div>
+
+<header class="hero">
+  <h1 class="title">Nature <span>Gallery</span></h1>
+  <p class="sub">Fourteen pictures, from the sky, the sea, and the garden,
+    all in one place, worth a closer look.</p>
+</header>
+
+<nav class="filters" id="filterNav">
+  <button class="active" data-filter="all"><span class="btxt">All</span><span class="bcount" id="cnt-all"></span></button>
+  <button data-filter="space"><span class="btxt">Sky &amp; Space</span><span class="bcount" id="cnt-space"></span></button>
+  <button data-filter="landmark"><span class="btxt">Landmarks</span><span class="bcount" id="cnt-landmark"></span></button>
+  <button data-filter="animal"><span class="btxt">Creatures</span><span class="bcount" id="cnt-animal"></span></button>
+  <button data-filter="nature"><span class="btxt">Garden</span><span class="bcount" id="cnt-nature"></span></button>
+</nav>
+
+<main class="board" id="board"></main>
+
+<p class="no-results" id="noResults">Nothing pinned here yet — try a different tag.</p>
+
+<footer>Nature Gallery · fourteen pictures, worth a closer look.</footer>
+
+<!-- Lightbox -->
+<div class="viewer" id="viewer">
+  <div class="viewer-inner">
+    <button class="v-close" id="vClose" aria-label="Close">&times;</button>
+    <button class="v-arrow v-prev" id="vPrev" aria-label="Previous">&#8249;</button>
+    <div class="v-frame">
+      <img id="vImg" src="" alt="">
+    </div>
+    <button class="v-arrow v-next" id="vNext" aria-label="Next">&#8250;</button>
+    <div class="v-info">
+      <span class="v-tag" id="vTag"></span>
+      <h3 id="vName"></h3>
+      <span class="v-index" id="vIndex"></span>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
